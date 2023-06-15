@@ -26,6 +26,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "github:tailwindcss/typography",
     "install": "^0.13.0"
   }
 }
