@@ -7,6 +7,11 @@ const LINKS = [
   { icon: <AiFillLinkedin />, url: '' },
 ];
 
+export const metadata = {
+  title: 'Contact me',
+  description: 'reese에게 메일보내기',
+};
+
 export default function ContactPage() {
   return (
     <section className="flex flex-col items-center">
