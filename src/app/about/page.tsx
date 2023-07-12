@@ -1,4 +1,4 @@
-import Hero from '@/components/Hero';
+import Profile from '@/components/Profile';
 
 export const metadata = {
   title: 'About me',
@@ -9,7 +9,7 @@ const TITLE_CLASS = 'text-2xl font-bold text-gray-800 my-2';
 export default function AboutPage() {
   return (
     <>
-      <Hero />
+      <Profile />
       <section className="bg-gray-100 shadow-lg p-8 m-8 text-center">
         <h2 className={TITLE_CLASS}>Who Am I?</h2>
         <p>개발 사랑해</p>
