@@ -8,19 +8,14 @@ export default function Profile() {
       <Image
         className="rounded-full mx-auto"
         src={profileImage}
-        width={250}
-        height={250}
+        width={200}
+        height={100}
         alt="Picture of the author"
         priority
       />
       <h2 className="text-3xl font-bold mt-2">Reese</h2>
       <h3 className="text-xl font-semibold">FrontEnd Engineer</h3>
       <p>who likes to travel</p>
-      <Link href="/contact">
-        <button className="bg-yellow-500 font-bold rounded-xl py-1 px-4 mt-2">
-          Contact Me
-        </button>
-      </Link>
     </section>
   );
 }

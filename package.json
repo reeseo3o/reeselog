@@ -31,6 +31,8 @@
   "devDependencies": {
     "@tailwindcss/typography": "github:tailwindcss/typography",
     "@types/nodemailer": "^6.4.8",
-    "install": "^0.13.0"
+    "install": "^0.13.0",
+    "prettier": "^3.0.0",
+    "prettier-plugin-tailwindcss": "^0.4.0"
   }
 }
