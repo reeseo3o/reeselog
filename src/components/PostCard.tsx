@@ -7,14 +7,16 @@ export default function PostCard({
 }: Props) {
   return (
     <Link href={`posts/${path}`}>
-      <article className="rounded-md overflow-hidden shadow-sm hover:shadow-md">
-        <div className="flex flex-col items-center p-4">
-          <time className="self-end text-gray-700">{date.toString()}</time>
-          <h3 className="text-lg font-bold">{title}</h3>
-          <p className="w-full truncate text-center">{description}</p>
-          <span className="text-sm rounded-lg bg-green-100 px-2 my-2">
-            {category}
-          </span>
+      <article className="w-full flex flex-col">
+        <div>
+          <div className="flex">
+            <h3 className="text-md font-bold mr-2">{title}</h3>
+            <span className="text-xs align-middle text-center text-rose-400">
+              {category}
+            </span>
+          </div>
+          <p className="text-center text-sm">{description}</p>
+          <time className="text-gray-500 text-xs">{date.toString()}</time>
         </div>
       </article>
     </Link>

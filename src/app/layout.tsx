@@ -7,8 +7,8 @@ const sans = Open_Sans({ subsets: ['latin'] });
 
 export const metadata = {
   title: {
-    default: "reese's blog",
-    template: "reese's blog | %s",
+    default: 'Reese.dev',
+    template: 'Reese.dev | %s',
   },
   description: "FrontEnd Engineer Reese's blog",
   icons: {
@@ -23,9 +23,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={sans.className}>
-      <body className="flex flex-col w-full mx-auto">
+      <body>
         <Header />
-        <main className="grow">{children}</main>
+        <section className="flex flex-col flex-nowrap pt-24 w-full min-h-screen items-center justify-between bg-white  dark:bg-sky-950 dark:text-white">
+          <main className="flex flex-col flex-nowrap w-full max-w-screen-md items-center z-10 px-5">
+            {children}
+          </main>
+        </section>
         <Footer />
       </body>
     </html>

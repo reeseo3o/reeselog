@@ -4,9 +4,10 @@ import PostCard from './PostCard';
 type Props = { posts: Post[] };
 export default function PostsGrid({ posts }: Props) {
   return (
-    <ul className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <ul>
       {posts.map((post) => (
-        <li key={post.path}>
+        <li key={post.path}
+        className='flex flex-nowrap items-center justify-between w-full rounded-lg my-4 p-1.5 cursor-pointer'>
           <PostCard post={post} />
         </li>
       ))}

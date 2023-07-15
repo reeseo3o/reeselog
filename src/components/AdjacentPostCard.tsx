@@ -8,7 +8,7 @@ type Props = {
 };
 
 const ICON_CLASS =
-  'text-5xl m-4 text-yellow-300 transition-all group-hover:text-6xl';
+  'text-5xl m-4 text-rose-300 transition-all group-hover:text-6xl';
 
 export default function AdjacentPostCard({
   post: { path, title, description },

@@ -4,18 +4,20 @@ import Link from 'next/link';
 
 export default function Profile() {
   return (
-    <section className="text-center">
+    <section className='flex w-full'>
       <Image
-        className="rounded-full mx-auto"
+        className="rounded"
         src={profileImage}
-        width={200}
+        width={250}
         height={100}
         alt="Picture of the author"
         priority
       />
+      <div className='ml-10'>
       <h2 className="text-3xl font-bold mt-2">Reese</h2>
       <h3 className="text-xl font-semibold">FrontEnd Engineer</h3>
       <p>who likes to travel</p>
+      </div>
     </section>
   );
 }
