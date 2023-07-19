@@ -1,25 +1,24 @@
 'use client';
-import Image from 'next/image';
 import { useState } from 'react';
 import { BiMoon, BiSun } from 'react-icons/bi';
 
 
 export default function DarkModeButton() {
   const [darkMode, setDarkMode] = useState(false);
-
+  
   const toggleDarkMode = () => {
-    const isDarkMode = localStorage.getItem('isDarkMode');
-    if (!isDarkMode) {
-      localStorage.setItem('isDarkMode', 'true');
-      setDarkMode(true);
-      document.body.classList.toggle('dark');
-    }
+    const isDarkMode = localStorage.getItem('isDarkMode') === 'true';
     if (isDarkMode) {
       localStorage.removeItem('isDarkMode');
-      setDarkMode(false);
-      document.body.classList.remove('dark');
+    } else {
+      localStorage.setItem('isDarkMode', 'true');
     }
+    setDarkMode(!isDarkMode);
+    document.body.classList.toggle('dark', !isDarkMode);
   };
+  
+  
+
   return (
     <div>
       <button onClick={toggleDarkMode}>
