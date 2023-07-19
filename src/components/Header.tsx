@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import DarkModeButton from './DarkModeButton';
+
 export default function Header() {
   return (
     <header className="flex justify-between items-center p-4 dark:text-white dark:bg-sky-950">

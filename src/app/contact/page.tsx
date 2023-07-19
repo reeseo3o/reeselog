@@ -10,6 +10,7 @@ export default function ContactPage() {
     <section className="flex flex-col items-center">
       <p>info@gmail.com</p>
       <h2 className="text-3xl font-bold my-2">Contact Me</h2>
+      <h2>📩</h2>
       <h2 className="text-3xl font-bold my-8">Send me an email</h2>
       <ContactForm />
     </section>

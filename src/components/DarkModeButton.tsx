@@ -1,6 +1,8 @@
 'use client';
 import Image from 'next/image';
 import { useState } from 'react';
+import { BiMoon, BiSun } from 'react-icons/bi';
+
 
 export default function DarkModeButton() {
   const [darkMode, setDarkMode] = useState(false);
@@ -10,7 +12,7 @@ export default function DarkModeButton() {
     if (!isDarkMode) {
       localStorage.setItem('isDarkMode', 'true');
       setDarkMode(true);
-      document.body.classList.add('dark');
+      document.body.classList.toggle('dark');
     }
     if (isDarkMode) {
       localStorage.removeItem('isDarkMode');
@@ -21,13 +23,7 @@ export default function DarkModeButton() {
   return (
     <div>
       <button onClick={toggleDarkMode}>
-        <Image
-          className="w-full opacity-40"
-          alt="sun"
-          src={`/images/icon/${darkMode ? 'sun' : 'moon'}.png`}
-          width={20}
-          height={0}
-        />
+        {darkMode  ? <BiMoon/> : <BiSun/>}
       </button>
     </div>
   );
